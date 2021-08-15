@@ -1,38 +1,185 @@
-.App {
+.header{
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.header-button{
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+}
+.header-button-text{
+  font-size:1.2rem;
+  padding: 0 0.5rem;
+}
+.total-items{
+ background-color: rgb(0, 0, 0);
+ color: rgb(255, 255, 255);
+ border-radius: 40%;
+ padding: 0.2rem 0.5rem;
+ font-weight: bold;
+  
+}
+.header-button:hover{
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+}
+.header-button:focus{
+ border:5px solid rgb(160, 156, 156);
+}
+.container{
+  display: flex;
+  flex-wrap: wrap;
+justify-content: center;
+}
+.card{
+ border: 1px solid rgb(226, 226, 226);
+ border-radius: 4px;
+ overflow: hidden;
+ margin: 1rem;
+ text-align: center;
+ padding-bottom: 2rem;
+ position: relative;
+width: 38%;
+box-sizing: border-box;
+
+}
+.sizediv{
+  background: rgb(192, 192, 192);
+  font-size: 2rem;
+  font-weight: lighter;
+  opacity: 0.6;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sale{
+  display: none;
+}
+.card:nth-child(2) .rating::before{
+  content: "⭐⭐⭐⭐⭐";
+}
+.card:nth-child(4) .rating::before{
+  content: "⭐⭐⭐⭐⭐";
+}
+.card:nth-child(n+7) .rating::before{
+  content: "⭐⭐⭐⭐⭐";
+}
+.card:nth-child(2) .price::before{
+  content: "$20.00";
+  text-decoration:line-through;
+  opacity: 0.7;
+}
+.card:nth-child(2) .sale{
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-weight:600;
+  border-radius: 4px;
+  padding: 2px 7px;
+  font-size: 12px;
+}
+.card:nth-child(3) .price::before{
+  content: "$50.00";
+  text-decoration:line-through;
+  opacity: 0.7;
+}
+.card:nth-child(3) .sale{
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-weight:600;
+  border-radius: 4px;
+  padding: 2px 7px;
+  font-size: 12px;
+}
+.card:nth-child(5) .price::before{
+  content: "$50.00";
+  text-decoration:line-through;
+  opacity: 0.7;
+}
+.card:nth-child(5) .sale{
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-weight:600;
+  border-radius: 4px;
+  padding: 2px 7px;
+  font-size: 12px;
+}
+.card:nth-child(7) .price::before{
+  content: "$20.00";
+  text-decoration:line-through;
+  opacity: 0.7;
+}
+.card:nth-child(7) .sale{
+  display: block;
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  font-weight:600;
+  border-radius: 4px;
+  padding: 2px 7px;
+  font-size: 12px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.content{
+  min-height: 9rem;
+}
+button{
+  padding: 0.7rem 1rem;
+  border-radius: 6px;
+  background-color: white;
+  border-color: rgb(0, 0, 0);
+  border-width: thin;
+}
+.zeroitems :hover{
+  color: rgb(245, 236, 236);
+  background-color: rgb(7, 6, 6);
+}
+.additem{
+  margin: 0rem 1rem;
+}
+.changeitems :hover{
+  color: rgb(245, 236, 236);
+  background-color: rgb(7, 6, 6);
+}
+@media(min-width:350px)
+{
+  .sizediv{
+    padding: 2rem 0rem;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media(min-width:570px)
+{
+  .card{
+    width:34%;
   }
-  to {
-    transform: rotate(360deg);
+}
+@media(min-width:670px)
+{
+  .card{
+    width:23%;
+  }
+  .sizediv{
+    padding: 3rem 0rem;
+  }
+}
+@media(min-width:1000px)
+{
+  .card{
+    width:19%;
+  }
+  .sizediv{
+    padding: 4rem 0rem;
   }
 }
