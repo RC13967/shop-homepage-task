@@ -135,12 +135,15 @@ box-sizing: border-box;
 .content{
   min-height: 9rem;
 }
-button{
+.add-to-cart{
   padding: 0.7rem 1rem;
+}
+button{
   border-radius: 6px;
   background-color: white;
   border-color: rgb(0, 0, 0);
   border-width: thin;
+  cursor: pointer;
 }
 .zeroitems :hover{
   color: rgb(245, 236, 236);
